@@ -1,13 +1,8 @@
 [
   {
-    "id": "test-material-2026-05-16",
-    "title": "Is Britain ungovernable?",
-    "date": "2026-05-16"
-  },
-  {
     "id": "test-material-2026-05-23",
-    "title": "A Starship enterprise",
-    "date": "2026-05-23"
+    "title": "The rise of Gen-Z socialism",
+    "date": "2026-06-06"
   },
   {
     "id": "test-material-2026-05-23",
@@ -16,7 +11,12 @@
   },
   {
     "id": "test-material-2026-05-23",
-    "title": "The rise of Gen-Z socialism",
-    "date": "2026-06-06"
+    "title": "A Starship enterprise",
+    "date": "2026-05-23"
+  },
+  {
+    "id": "test-material-2026-05-16",
+    "title": "Is Britain ungovernable?",
+    "date": "2026-05-16"
   }
 ]
