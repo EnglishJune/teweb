@@ -51,16 +51,20 @@ onMounted(async () => {
 
     <main>
       <section class="notice-panel" aria-labelledby="usage-heading">
-        <h1 id="usage-heading">How to use these materials</h1>
-        <p>These resources are shared for English learning and personal study.</p>
-        <p>Download the available files and use them for your own practice.</p>
+        <h1 id="usage-heading">How to use these | 使用说明</h1>
+        <p>PDF: All weekly articles in pdf format | 汇总文章</p>
+        <p>Epub: All weekly articles in Ebook format | 汇总文章</p>
+        <p>Audio: Articles with mp3 | 单篇文章带mp3</p>
 
-        <h2>Disclaimer</h2>
-        <p>The materials on this website are provided for educational purposes only.</p>
+        <h2>Disclaimer | 免责申明</h2>
+        <p>The materials on this website are provided for educational purposes only!</p>
+        <p>仅供英语学习使用！</p>
         <p>
           Please do not redistribute, resell, or upload them to other platforms without
           permission.
         </p>
+        <p>未经允许不可转发、出售、上传到其他平台。</p>
+
       </section>
 
       <section class="materials-list" aria-label="Materials download list">
@@ -96,7 +100,7 @@ onMounted(async () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Ebook
+                Epub
               </a>
               <a
                 :href="fileLinks(material.date).audio"
