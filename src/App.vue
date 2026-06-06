@@ -1,13 +1,24 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
+
+const SITE_NAME = 'Learn English with You~'
+const LOGO_PATH = '/logo.png'
+const BLOB_BASE_URL = "https://teblob.blob.core.windows.net/tematerials";
 
 const materials = ref([])
 const isLoading = ref(true)
 const errorMessage = ref('')
 
-const categories = computed(() => {
-  return [...new Set(materials.value.map((material) => material.category))]
-})
+const fileLinks = (date) => {
+  const folderUrl = `${BLOB_BASE_URL}/${date}`
+
+  return {
+    cover: `${folderUrl}/cover.jpg`,
+    pdf: `${folderUrl}/${date}.pdf`,
+    ebook: `${folderUrl}/${date}.epub`,
+    audio: `${folderUrl}/${date}.tar.gz`,
+  }
+}
 
 onMounted(async () => {
   try {
@@ -27,54 +38,81 @@ onMounted(async () => {
 </script>
 
 <template>
-  <main class="page-shell">
-    <section class="intro">
-      <p class="eyebrow">English Learning Materials</p>
-      <h1>Curated resources for better English practice.</h1>
-      <p class="intro-copy">
-        Browse learning materials by type and category. Real download files will
-        be hosted outside GitHub in Azure Blob Storage.
-      </p>
-    </section>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Homepage">
+        <img class="brand-logo" :src="LOGO_PATH" alt="" />
+        <span>{{ SITE_NAME }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" aria-current="page">TE</a>
+      </nav>
+    </header>
 
-    <section class="toolbar" aria-label="Material filters preview">
-      <div>
-        <span class="toolbar-label">Categories</span>
-        <div class="category-list">
-          <span v-for="category in categories" :key="category" class="category-pill">
-            {{ category }}
-          </span>
-        </div>
-      </div>
-      <button class="search-placeholder" type="button" disabled>Search coming soon</button>
-    </section>
+    <main>
+      <section class="notice-panel" aria-labelledby="usage-heading">
+        <h1 id="usage-heading">How to use these materials</h1>
+        <p>These resources are shared for English learning and personal study.</p>
+        <p>Download the available files and use them for your own practice.</p>
 
-    <section class="materials-section" aria-labelledby="materials-heading">
-      <div class="section-heading">
-        <h2 id="materials-heading">Available Materials</h2>
-        <span>{{ materials.length }} items</span>
-      </div>
+        <h2>Disclaimer</h2>
+        <p>The materials on this website are provided for educational purposes only.</p>
+        <p>
+          Please do not redistribute, resell, or upload them to other platforms without
+          permission.
+        </p>
+      </section>
 
-      <p v-if="isLoading" class="status-message">Loading materials...</p>
-      <p v-else-if="errorMessage" class="status-message error">{{ errorMessage }}</p>
+      <section class="materials-list" aria-label="Materials download list">
+        <p v-if="isLoading" class="status-message">Loading materials...</p>
+        <p v-else-if="errorMessage" class="status-message error">{{ errorMessage }}</p>
 
-      <div v-else class="materials-grid">
         <article
+          v-else
           v-for="material in materials"
-          :key="material.title"
-          class="material-card"
+          :key="material.id"
+          class="material-row"
         >
-          <div class="card-header">
-            <span class="file-type">{{ material.fileType }}</span>
-            <span class="category">{{ material.category }}</span>
+          <img
+            class="material-cover"
+            :src="fileLinks(material.date).cover"
+            :alt="`${material.title} cover`"
+            loading="lazy"
+          />
+
+          <div class="material-details">
+            <h2>{{ material.title }}</h2>
+            <time :datetime="material.date">{{ material.date }}</time>
+            <div class="download-actions" aria-label="Download options">
+              <a
+                :href="fileLinks(material.date).pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                PDF
+              </a>
+              <a
+                :href="fileLinks(material.date).ebook"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ebook
+              </a>
+              <a
+                :href="fileLinks(material.date).audio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Audio
+              </a>
+            </div>
           </div>
-          <h3>{{ material.title }}</h3>
-          <p>{{ material.description }}</p>
-          <a :href="material.downloadUrl" class="download-link" target="_blank" rel="noreferrer">
-            Download
-          </a>
         </article>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      &copy; 2026 English Learning Materials. For educational use only.
+    </footer>
+  </div>
 </template>
