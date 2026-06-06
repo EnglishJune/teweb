@@ -5,6 +5,7 @@
   --accent-soft: #f4f6e8;
   --button-bg: #b7d07a;
   --button-hover: #a8bf68;
+  --logo-main: #248067;
   --border: #d7d7d0;
   --text: #111111;
   --muted: #333333;
@@ -53,7 +54,7 @@ p {
 
 .site-header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   min-height: 60px;
   margin-bottom: 28px;
@@ -64,29 +65,61 @@ p {
 
 .brand {
   display: inline-flex;
-  align-items: center;
-  gap: 26px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   color: var(--text);
-  font-size: clamp(1.35rem, 3vw, 1.9rem);
   font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
 }
 
+.brand-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
 .brand-logo {
-  width: 32px;
+  width: 42px;
   height: 42px;
   object-fit: contain;
 }
 
+.brand-language {
+  margin-left: -3px;
+  color: var(--logo-main);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 0.84;
+}
+
+.brand-tagline {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: flex-end;
+}
+
 .site-nav a {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   min-height: 44px;
   padding: 0 4px;
-  color: var(--text);
-  font-size: 1.35rem;
+  color: var(--button-bg);
+  font-size: 1.3rem;
+  line-height: 1;
   text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-nav a:hover {
+  color: var(--logo-main);
 }
 
 .notice-panel {
@@ -99,7 +132,7 @@ p {
 .notice-panel h1,
 .notice-panel h2 {
   color: var(--text);
-  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
   line-height: 1.2;
 }
 
@@ -149,12 +182,13 @@ p {
 
 .material-details {
   min-width: 0;
+  transform: translateY(-10px);
 }
 
 .material-details h2 {
   margin-bottom: 14px;
   color: var(--text);
-  font-size: clamp(1.75rem, 3.6vw, 2.45rem);
+  font-size: clamp(1.45rem, 3vw, 2rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -222,12 +256,25 @@ p {
   }
 
   .brand {
-    gap: 18px;
+    gap: 3px;
   }
 
   .brand-logo {
-    width: 28px;
+    width: 36px;
     height: 36px;
+  }
+
+  .brand-language {
+    font-size: 41px;
+  }
+
+  .brand-tagline {
+    font-size: 0.76rem;
+  }
+
+  .site-nav a {
+    min-height: 38px;
+    font-size: 1.1rem;
   }
 
   .notice-panel {
@@ -271,13 +318,21 @@ p {
   }
 
   .brand {
-    gap: 12px;
+    gap: 3px;
     max-width: calc(100% - 48px);
   }
 
   .brand-logo {
-    width: 26px;
+    width: 34px;
     height: 34px;
+  }
+
+  .brand-language {
+    font-size: 39px;
+  }
+
+  .brand-tagline {
+    font-size: 0.68rem;
   }
 
   .site-nav a {
