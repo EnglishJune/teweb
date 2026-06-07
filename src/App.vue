@@ -42,8 +42,13 @@ onMounted(async () => {
     <header class="site-header">
       <a class="brand" href="/" aria-label="Homepage">
         <span class="brand-main">
-          <img class="brand-logo" :src="LOGO_PATH" alt="" />
-          <span class="brand-language">English</span>
+          <span
+            class="brand-j-mark"
+            :style="{ '--brand-logo-url': `url(${LOGO_PATH})` }"
+            aria-hidden="true"
+          ></span>
+          <span class="brand-letter-e">E</span>
+          <span class="brand-word-rest">NGLISH</span>
         </span>
         <span class="brand-tagline">{{ SITE_NAME }}</span>
       </a>

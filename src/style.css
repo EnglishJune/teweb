@@ -76,23 +76,49 @@ p {
 
 .brand-main {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0;
+  height: 42px;
+  color: var(--logo-main);
 }
 
-.brand-logo {
+.brand-j-mark {
+  display: block;
+  flex: 0 0 auto;
   width: 42px;
   height: 42px;
-  object-fit: contain;
+  background: currentColor;
+  -webkit-mask: var(--brand-logo-url) center / contain no-repeat;
+  mask: var(--brand-logo-url) center / contain no-repeat;
 }
 
-.brand-language {
-  margin-left: -3px;
-  color: var(--logo-main);
+.brand-letter-e,
+.brand-word-rest {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.brand-letter-e {
+  display: inline-block;
+  width: 28px;
+  margin-left: -2px;
+  font-size: 50px;
+  font-weight: 400;
   line-height: 0.84;
+  text-shadow: 0.35px 0 0 currentColor;
+  transform: scaleX(0.82);
+  transform-origin: left top;
+}
+
+.brand-word-rest {
+  display: inline-block;
+  margin-top: 22px;
+  margin-left: 2px;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  transform: scaleX(0.92);
+  transform-origin: left center;
 }
 
 .brand-tagline {
@@ -259,13 +285,23 @@ p {
     gap: 3px;
   }
 
-  .brand-logo {
+  .brand-main {
+    height: 36px;
+  }
+
+  .brand-j-mark {
     width: 36px;
     height: 36px;
   }
 
-  .brand-language {
-    font-size: 41px;
+  .brand-letter-e {
+    width: 24px;
+    font-size: 42px;
+  }
+
+  .brand-word-rest {
+    margin-top: 19px;
+    font-size: 17px;
   }
 
   .brand-tagline {
@@ -322,13 +358,23 @@ p {
     max-width: calc(100% - 48px);
   }
 
-  .brand-logo {
+  .brand-main {
+    height: 34px;
+  }
+
+  .brand-j-mark {
     width: 34px;
     height: 34px;
   }
 
-  .brand-language {
-    font-size: 39px;
+  .brand-letter-e {
+    width: 23px;
+    font-size: 40px;
+  }
+
+  .brand-word-rest {
+    margin-top: 18px;
+    font-size: 16px;
   }
 
   .brand-tagline {
