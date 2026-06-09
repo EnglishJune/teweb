@@ -54,7 +54,7 @@ p {
 
 .site-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   min-height: 60px;
   margin-bottom: 28px;
@@ -65,66 +65,18 @@ p {
 
 .brand {
   display: inline-flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: 3px;
-  color: var(--text);
-  font-weight: 700;
-  letter-spacing: 0;
+  max-width: calc(100% - 56px);
+  min-width: 0;
   text-decoration: none;
 }
 
-.brand-main {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 0;
-  height: 42px;
-  color: var(--logo-main);
-}
-
-.brand-j-mark {
+.brand-logo {
   display: block;
-  flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
-  background: currentColor;
-  -webkit-mask: var(--brand-logo-url) center / contain no-repeat;
-  mask: var(--brand-logo-url) center / contain no-repeat;
-}
-
-.brand-letter-e,
-.brand-word-rest {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-}
-
-.brand-letter-e {
-  display: inline-block;
-  width: 28px;
-  margin-left: -2px;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 0.84;
-  text-shadow: 0.35px 0 0 currentColor;
-  transform: scaleX(0.82);
-  transform-origin: left top;
-}
-
-.brand-word-rest {
-  display: inline-block;
-  margin-top: 22px;
-  margin-left: 2px;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.2px;
-  transform: scaleX(0.92);
-  transform-origin: left center;
-}
-
-.brand-tagline {
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1;
+  width: clamp(156px, 14vw, 196px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -281,31 +233,8 @@ p {
     padding: 8px 24px;
   }
 
-  .brand {
-    gap: 3px;
-  }
-
-  .brand-main {
-    height: 36px;
-  }
-
-  .brand-j-mark {
-    width: 36px;
-    height: 36px;
-  }
-
-  .brand-letter-e {
-    width: 24px;
-    font-size: 42px;
-  }
-
-  .brand-word-rest {
-    margin-top: 19px;
-    font-size: 17px;
-  }
-
-  .brand-tagline {
-    font-size: 0.76rem;
+  .brand-logo {
+    width: 172px;
   }
 
   .site-nav a {
@@ -354,31 +283,12 @@ p {
   }
 
   .brand {
-    gap: 3px;
     max-width: calc(100% - 48px);
   }
 
-  .brand-main {
-    height: 34px;
-  }
-
-  .brand-j-mark {
-    width: 34px;
-    height: 34px;
-  }
-
-  .brand-letter-e {
-    width: 23px;
-    font-size: 40px;
-  }
-
-  .brand-word-rest {
-    margin-top: 18px;
-    font-size: 16px;
-  }
-
-  .brand-tagline {
-    font-size: 0.68rem;
+  .brand-logo {
+    width: min(164px, 100%);
+    height: auto;
   }
 
   .site-nav a {

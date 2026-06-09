@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 
-const SITE_NAME = 'Learn English with you~'
 const LOGO_PATH = '/logo.png'
 const BLOB_BASE_URL = "https://teblob.blob.core.windows.net/tematerials";
 
@@ -41,16 +40,7 @@ onMounted(async () => {
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="Homepage">
-        <span class="brand-main">
-          <span
-            class="brand-j-mark"
-            :style="{ '--brand-logo-url': `url(${LOGO_PATH})` }"
-            aria-hidden="true"
-          ></span>
-          <span class="brand-letter-e">E</span>
-          <span class="brand-word-rest">NGLISH</span>
-        </span>
-        <span class="brand-tagline">{{ SITE_NAME }}</span>
+        <img class="brand-logo" :src="LOGO_PATH" alt="English learning logo" />
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/" aria-current="page">TE</a>
