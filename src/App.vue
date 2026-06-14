@@ -77,6 +77,7 @@ onMounted(async () => {
           happy__june
           联系我。
         </p>
+        <p><span style="color: red;">!!! AD: 现有一个ChatGPT business team seat空缺，官方订阅，本月已付款，被放鸽子了，如有需要可加我微信。本月130元，7.8号到期；续订180元每月，可能随汇率有波动。</span></p>
         <h2 id="usage-heading">How to use | 使用说明</h2>
         <p>三个下载按钮对应：</p>
         <ul>
