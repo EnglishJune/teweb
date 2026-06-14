@@ -6,6 +6,7 @@
   --button-bg: #b7d07a;
   --button-hover: #a8bf68;
   --logo-main: #248067;
+  --link: #19c200;
   --border: #d7d7d0;
   --text: #111111;
   --muted: #333333;
@@ -110,23 +111,112 @@ p {
 .notice-panel h1,
 .notice-panel h2 {
   color: var(--text);
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-  line-height: 1.2;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  line-height: 1.5;
 }
 
 .notice-panel h1 {
   margin-bottom: 20px;
 }
 
-.notice-panel h2 {
-  margin: 62px 0 20px;
+.notice-panel .news-heading {
+  color: #FF0000;
 }
 
-.notice-panel p {
+.notice-panel h2 {
+  margin: 31px 0 20px;
+}
+
+.notice-panel p,
+.notice-panel li {
   margin-bottom: 12px;
   color: var(--text);
-  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  font-size: clamp(0.85rem, 2vw, 1.0rem);
   line-height: 1.45;
+}
+
+.notice-panel ul {
+  margin: 0 0 12px;
+  padding-left: 1.35rem;
+}
+
+.notice-panel .disclaimer-text {
+  color: #FF0000;
+}
+
+.contact-link,
+.wechat-trigger {
+  display: inline-flex;
+  align-items: center;
+  color: var(--link);
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+.contact-link {
+  transform: translateY(0.12em);
+}
+
+.contact-icon {
+  font-size: 1.9em;
+  line-height: 1;
+}
+
+.wechat-trigger {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.wechat-trigger img {
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.wechat-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(17, 17, 17, 0.48);
+}
+
+.wechat-modal-panel {
+  position: relative;
+  width: min(92vw, 360px);
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.wechat-modal-panel img {
+  width: 100%;
+  height: auto;
+}
+
+.wechat-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .materials-list {
@@ -302,7 +392,7 @@ p {
   }
 
   .notice-panel h2 {
-    margin-top: 34px;
+    margin-top: 17px;
   }
 
   .material-row {
