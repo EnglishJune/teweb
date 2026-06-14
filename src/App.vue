@@ -52,6 +52,7 @@ onMounted(async () => {
       <section class="notice-panel" aria-labelledby="news-heading">
         <h1 id="news-heading" class="news-heading">News | 最新消息</h1>
         <p>今后网页更新时间固定为北京时间<strong>每周日9:00 AM</strong>，如有改变将邮件告知。</p>
+        <p>本周(2026-06-13)有三篇文章官网动画不便获取，用了Print Edition对应文章代替，因此可能与官网不完全一样。</p>
         <p>
           另：我将逐步发放部分文章的学习笔记，主要由ChatGPT生成，辅以人工核查，有html和PDF两种格式，这些文章的音频会同步放到B站，以更方便听读学习。目前内容和形式仍在尝试中，为避免浪费，愿意参与尝试的朋友们可邮件
           <a
@@ -76,7 +77,7 @@ onMounted(async () => {
           happy__june
           联系我。
         </p>
-        <h2 id="usage-heading">How to use these | 使用说明</h2>
+        <h2 id="usage-heading">How to use | 使用说明</h2>
         <p>三个下载按钮对应：</p>
         <ul>
           <li>PDF: All weekly articles in pdf format | 汇总文章</li>
