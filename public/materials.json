@@ -1,6 +1,11 @@
 [
   {
     "id": "test-material-2026-05-23",
+    "title": "Never mind the Brexit",
+    "date": "2026-06-20"
+  },
+  {
+    "id": "test-material-2026-05-23",
     "title": "A World Cup paradox",
     "date": "2026-06-13"
   },
@@ -18,10 +23,5 @@
     "id": "test-material-2026-05-23",
     "title": "A Starship enterprise",
     "date": "2026-05-23"
-  },
-  {
-    "id": "test-material-2026-05-16",
-    "title": "Is Britain ungovernable?",
-    "date": "2026-05-16"
   }
 ]
