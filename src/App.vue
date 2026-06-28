@@ -25,7 +25,7 @@ const homeTiles = [
     icon: '/icons/building-clock-secondary.svg',
   },
   {
-    label: 'You Matters',
+    label: 'You Matter',
     icon: '/icons/you-matter-heart.svg',
   },
 ]
@@ -106,10 +106,15 @@ onUnmounted(() => {
           <img class="home-logo" :src="LOGO_PATH" alt="J English" />
         </a>
         <nav class="home-nav" aria-label="Main navigation">
-          <a href="/resources" @click="navigate($event, '/resources')">Resources</a>
+          <div class="nav-menu">
+            <a class="nav-menu-trigger" href="/resources" @click="navigate($event, '/resources')">Resources</a>
+            <div class="nav-submenu" aria-label="Resources submenu">
+              <a href="/resources/te" @click="navigate($event, '/resources/te')">TE</a>
+            </div>
+          </div>
           <span aria-disabled="true">Later</span>
           <span aria-disabled="true">Later</span>
-          <span aria-disabled="true">You Matters</span>
+          <span aria-disabled="true">You Matter</span>
         </nav>
       </header>
 
@@ -140,9 +145,16 @@ onUnmounted(() => {
         <a class="directory-brand" href="/" aria-label="J English homepage" @click="navigate($event, '/')">
           <img :src="LOGO_PATH" alt="J English" />
         </a>
-        <nav class="directory-nav" aria-label="Resource navigation">
-          <a href="/" @click="navigate($event, '/')">Home</a>
-          <a href="/resources" aria-current="page" @click="navigate($event, '/resources')">Resources</a>
+        <nav class="directory-nav" aria-label="Main navigation">
+          <div class="nav-menu">
+            <a class="nav-menu-trigger" href="/resources" aria-current="page" @click="navigate($event, '/resources')">Resources</a>
+            <div class="nav-submenu" aria-label="Resources submenu">
+              <a href="/resources/te" @click="navigate($event, '/resources/te')">TE</a>
+            </div>
+          </div>
+          <span aria-disabled="true">Later</span>
+          <span aria-disabled="true">Later</span>
+          <span aria-disabled="true">You Matter</span>
         </nav>
       </header>
 
@@ -177,8 +189,15 @@ onUnmounted(() => {
             <img class="brand-logo" :src="LOGO_PATH" alt="English learning logo" />
           </a>
           <nav class="site-nav" aria-label="Main navigation">
-            <a href="/resources" @click="navigate($event, '/resources')">Resources</a>
-            <a href="/resources/te" aria-current="page" @click="navigate($event, '/resources/te')">TE</a>
+            <div class="nav-menu">
+              <a class="nav-menu-trigger" href="/resources" @click="navigate($event, '/resources')">Resources</a>
+              <div class="nav-submenu" aria-label="Resources submenu">
+                <a href="/resources/te" aria-current="page" @click="navigate($event, '/resources/te')">TE</a>
+              </div>
+            </div>
+            <span aria-disabled="true">Later</span>
+            <span aria-disabled="true">Later</span>
+            <span aria-disabled="true">You Matter</span>
           </nav>
         </header>
 
