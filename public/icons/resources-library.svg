@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Library resources icon</title>
+  <desc id="desc">A simple white line icon of a library with books.</desc>
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 52H108" />
+    <path d="M26 102H102" />
+    <path d="M32 52V94" />
+    <path d="M50 52V94" />
+    <path d="M78 52V94" />
+    <path d="M96 52V94" />
+    <path d="M18 44L64 20L110 44" />
+    <path d="M42 98V74C48 69 57 69 64 76V102C57 95 48 94 42 98Z" />
+    <path d="M86 98V74C80 69 71 69 64 76V102C71 95 80 94 86 98Z" />
+  </g>
+</svg>

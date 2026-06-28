@@ -1,0 +1,16 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Waiting clock icon</title>
+  <desc id="desc">A simple white line icon of a clock for a second building item.</desc>
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="38" />
+    <path d="M64 40V66L82 78" />
+    <path d="M38 18L28 28" />
+    <path d="M90 18L100 28" />
+    <path d="M35 106H93" />
+    <path d="M46 106L52 96" />
+    <path d="M82 106L76 96" />
+    <path d="M42 64H34" />
+    <path d="M94 64H86" />
+    <path d="M64 34V30" />
+  </g>
+</svg>
