@@ -56,7 +56,7 @@ p {
 
 .app-shell--home {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   color: var(--home-fg);
   background: var(--home-bg);
 }
@@ -248,7 +248,7 @@ p {
   justify-content: center;
   width: min(100% - 48px, 1280px);
   margin: 0 auto;
-  padding: 72px 0 48px;
+  padding: 72px 0 28px;
 }
 
 .home-main h1 {
@@ -315,7 +315,7 @@ p {
 }
 
 .home-tagline {
-  margin: clamp(48px, 7vw, 70px) 0 0;
+  margin: clamp(40px, 5.5vw, 56px) 0 0;
   color: #ffffff;
   font-size: clamp(1.45rem, 2.6vw, 2.2rem);
   font-style: italic;
@@ -324,9 +324,38 @@ p {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
 
+.home-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 10px 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.home-footer a {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+}
+
+.home-footer a:hover {
+  color: #ffffff;
+}
+
 .app-shell--resources {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   color: #ffffff;
   background: var(--home-bg);
+}
+
+.directory-footer {
+  padding-bottom: 28px;
 }
 
 .directory-header {
@@ -373,56 +402,50 @@ p {
 .directory-main {
   width: min(100% - 48px, 980px);
   margin: 0 auto;
-  padding: clamp(56px, 9vw, 112px) 0 80px;
-}
-
-.directory-heading {
-  margin-bottom: 34px;
-}
-
-.directory-heading p {
-  margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.directory-heading h1 {
-  margin-bottom: 0;
-  color: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 7vw, 5.2rem);
-  line-height: 1.05;
+  padding: clamp(120px, 16vw, 190px) 0 80px;
 }
 
 .resource-cards {
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 196px));
+  justify-content: center;
+  gap: 20px;
 }
 
 .resource-card {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 22px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  min-height: 132px;
-  padding: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  min-height: 168px;
+  padding: 22px 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 44px rgba(17, 17, 17, 0.1);
   color: #ffffff;
+  text-align: center;
   text-decoration: none;
   transition:
+    transform 160ms ease,
     background-color 160ms ease,
-    border-color 160ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+  backdrop-filter: blur(14px);
 }
 
 .resource-card:hover {
-  border-color: rgba(255, 255, 255, 0.86);
-  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 22px 52px rgba(17, 17, 17, 0.14);
 }
 
-.resource-card img {
+.resource-card-icon {
   width: 72px;
   height: 72px;
+  margin-bottom: 16px;
+  object-fit: contain;
 }
 
 .resource-card strong,
@@ -431,15 +454,15 @@ p {
 }
 
 .resource-card strong {
-  margin-bottom: 5px;
-  font-size: 2rem;
+  margin-bottom: 6px;
+  font-size: 1.45rem;
   line-height: 1.1;
 }
 
 .resource-card small {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
 .page-shell {
@@ -999,6 +1022,14 @@ p {
     margin-top: 38px;
   }
 
+  .home-footer {
+    width: min(100% - 28px, 560px);
+    flex-direction: column;
+    gap: 4px;
+    padding: 22px 0;
+    font-size: 0.78rem;
+  }
+
   .directory-header {
     align-items: flex-start;
   }
@@ -1022,20 +1053,24 @@ p {
     padding-top: 44px;
   }
 
-  .resource-card {
-    grid-template-columns: 58px 1fr;
-    gap: 16px;
-    min-height: 116px;
-    padding: 18px;
+  .resource-cards {
+    grid-template-columns: minmax(144px, 168px);
+    justify-content: center;
   }
 
-  .resource-card img {
-    width: 58px;
-    height: 58px;
+  .resource-card {
+    min-height: 146px;
+    padding: 18px 14px 16px;
+  }
+
+  .resource-card-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
   }
 
   .resource-card strong {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .page-shell {

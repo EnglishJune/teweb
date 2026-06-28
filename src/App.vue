@@ -35,8 +35,9 @@ const homeTiles = [
 const resources = [
   {
     title: 'TE',
-    description: 'Weekly English learning materials with PDF, Epub, and audio downloads.',
+    description: '《经济学人》',
     href: '/resources/te',
+    icon: '/icons/te_logo.svg',
   },
 ]
 
@@ -175,8 +176,13 @@ onUnmounted(() => {
           </component>
         </div>
 
-        <p class="home-tagline">Learning a language, for better understanding!</p>
+        <p class="home-tagline">Learning a language, for better understanding and communication!</p>
       </main>
+
+      <footer class="home-footer">
+        <span>&copy; 2026 J English.</span>
+        <a href="mailto:englishjune@163.com">englishjune@163.com</a>
+      </footer>
     </template>
 
     <template v-else-if="pageName === 'resources'">
@@ -196,20 +202,7 @@ onUnmounted(() => {
           <span></span>
         </button>
         <nav :class="['directory-nav', { 'nav-open': isNavOpen }]" aria-label="Main navigation">
-          <div :class="['nav-menu', { 'submenu-open': isResourcesSubmenuOpen }]">
-            <a
-              class="nav-menu-trigger"
-              href="/resources"
-              aria-current="page"
-              :aria-expanded="isResourcesSubmenuOpen"
-              @click="handleResourcesClick"
-            >
-              Resources
-            </a>
-            <div class="nav-submenu" aria-label="Resources submenu">
-              <a href="/resources/te" @click="navigate($event, '/resources/te')">TE</a>
-            </div>
-          </div>
+          <a href="/" @click="navigate($event, '/')">Home</a>
           <span aria-disabled="true">Later</span>
           <span aria-disabled="true">Later</span>
           <span aria-disabled="true">You Matter</span>
@@ -217,11 +210,6 @@ onUnmounted(() => {
       </header>
 
       <main class="directory-main">
-        <div class="directory-heading">
-          <p>Resources</p>
-          <h1>Learning Materials</h1>
-        </div>
-
         <section class="resource-cards" aria-label="Resource list">
           <a
             v-for="resource in resources"
@@ -230,7 +218,7 @@ onUnmounted(() => {
             :href="resource.href"
             @click="navigate($event, resource.href)"
           >
-            <img src="/icons/resources-library.svg" alt="" aria-hidden="true" />
+            <img class="resource-card-icon" :src="resource.icon" alt="" aria-hidden="true" />
             <span>
               <strong>{{ resource.title }}</strong>
               <small>{{ resource.description }}</small>
@@ -238,6 +226,11 @@ onUnmounted(() => {
           </a>
         </section>
       </main>
+
+      <footer class="home-footer directory-footer">
+        <span>&copy; 2026 J English.</span>
+        <a href="mailto:englishjune@163.com">englishjune@163.com</a>
+      </footer>
     </template>
 
     <template v-else>
