@@ -8,6 +8,8 @@ const materials = ref([])
 const isLoading = ref(true)
 const errorMessage = ref('')
 const isWechatQrOpen = ref(false)
+const isNavOpen = ref(false)
+const isResourcesSubmenuOpen = ref(false)
 const currentPath = ref(normalizePath(window.location.pathname))
 
 const homeTiles = [
@@ -63,12 +65,31 @@ function normalizePath(path) {
 function navigate(event, href) {
   if (!href) return
   event.preventDefault()
+  isNavOpen.value = false
+  isResourcesSubmenuOpen.value = false
   const nextPath = normalizePath(href)
   if (nextPath !== currentPath.value) {
     window.history.pushState({}, '', nextPath)
     currentPath.value = nextPath
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
+}
+
+function toggleNav() {
+  isNavOpen.value = !isNavOpen.value
+  if (!isNavOpen.value) {
+    isResourcesSubmenuOpen.value = false
+  }
+}
+
+function handleResourcesClick(event) {
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    event.preventDefault()
+    isResourcesSubmenuOpen.value = !isResourcesSubmenuOpen.value
+    return
+  }
+
+  navigate(event, '/resources')
 }
 
 function handlePopState() {
@@ -105,9 +126,27 @@ onUnmounted(() => {
         <a class="home-brand" href="/" aria-label="J English homepage" @click="navigate($event, '/')">
           <img class="home-logo" :src="LOGO_PATH" alt="J English" />
         </a>
-        <nav class="home-nav" aria-label="Main navigation">
-          <div class="nav-menu">
-            <a class="nav-menu-trigger" href="/resources" @click="navigate($event, '/resources')">Resources</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          :aria-expanded="isNavOpen"
+          aria-label="Toggle navigation menu"
+          @click="toggleNav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav :class="['home-nav', { 'nav-open': isNavOpen }]" aria-label="Main navigation">
+          <div :class="['nav-menu', { 'submenu-open': isResourcesSubmenuOpen }]">
+            <a
+              class="nav-menu-trigger"
+              href="/resources"
+              :aria-expanded="isResourcesSubmenuOpen"
+              @click="handleResourcesClick"
+            >
+              Resources
+            </a>
             <div class="nav-submenu" aria-label="Resources submenu">
               <a href="/resources/te" @click="navigate($event, '/resources/te')">TE</a>
             </div>
@@ -145,9 +184,28 @@ onUnmounted(() => {
         <a class="directory-brand" href="/" aria-label="J English homepage" @click="navigate($event, '/')">
           <img :src="LOGO_PATH" alt="J English" />
         </a>
-        <nav class="directory-nav" aria-label="Main navigation">
-          <div class="nav-menu">
-            <a class="nav-menu-trigger" href="/resources" aria-current="page" @click="navigate($event, '/resources')">Resources</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          :aria-expanded="isNavOpen"
+          aria-label="Toggle navigation menu"
+          @click="toggleNav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav :class="['directory-nav', { 'nav-open': isNavOpen }]" aria-label="Main navigation">
+          <div :class="['nav-menu', { 'submenu-open': isResourcesSubmenuOpen }]">
+            <a
+              class="nav-menu-trigger"
+              href="/resources"
+              aria-current="page"
+              :aria-expanded="isResourcesSubmenuOpen"
+              @click="handleResourcesClick"
+            >
+              Resources
+            </a>
             <div class="nav-submenu" aria-label="Resources submenu">
               <a href="/resources/te" @click="navigate($event, '/resources/te')">TE</a>
             </div>
@@ -188,9 +246,27 @@ onUnmounted(() => {
           <a class="brand" href="/" aria-label="Homepage" @click="navigate($event, '/')">
             <img class="brand-logo" :src="LOGO_PATH" alt="English learning logo" />
           </a>
-          <nav class="site-nav" aria-label="Main navigation">
-            <div class="nav-menu">
-              <a class="nav-menu-trigger" href="/resources" @click="navigate($event, '/resources')">Resources</a>
+          <button
+            class="nav-toggle nav-toggle--light"
+            type="button"
+            :aria-expanded="isNavOpen"
+            aria-label="Toggle navigation menu"
+            @click="toggleNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav :class="['site-nav', { 'nav-open': isNavOpen }]" aria-label="Main navigation">
+            <div :class="['nav-menu', { 'submenu-open': isResourcesSubmenuOpen }]">
+              <a
+                class="nav-menu-trigger"
+                href="/resources"
+                :aria-expanded="isResourcesSubmenuOpen"
+                @click="handleResourcesClick"
+              >
+                Resources
+              </a>
               <div class="nav-submenu" aria-label="Resources submenu">
                 <a href="/resources/te" aria-current="page" @click="navigate($event, '/resources/te')">TE</a>
               </div>
