@@ -276,7 +276,7 @@ onUnmounted(() => {
             <h1 id="rss-page-heading">Subscribe to updates</h1>
             <div class="rss-feed-block">
               <strong>RSS feed:</strong>
-              <a href="/rss.xml" target="_blank" rel="noreferrer">https://www.jenglish.top/rss.xml</a>
+              <a href="/resources/te/rss.xml" target="_blank" rel="noreferrer">https://www.jenglish.top/resources/te/rss.xml</a>
             </div>
             <p>You can subscribe with Feedly, Inoreader, NetNewsWire, Reeder, or any RSS reader.</p>
           </section>
