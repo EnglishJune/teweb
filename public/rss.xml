@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J English TE Updates</title>
+    <link>https://www.jenglish.top/resources/te</link>
+    <description>Updates for J English TE learning materials.</description>
+    <language>en</language>
+    <atom:link href="https://www.jenglish.top/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sat, 27 Jun 2026 01:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Andy who?</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-06-27</guid>
+      <pubDate>Sat, 27 Jun 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-06-27.</description>
+    </item>
+    <item>
+      <title>Never mind the Brexit</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-06-20</guid>
+      <pubDate>Sat, 20 Jun 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-06-20.</description>
+    </item>
+    <item>
+      <title>A World Cup paradox</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-06-13.</description>
+    </item>
+    <item>
+      <title>The rise of Gen-Z socialism</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-06-06.</description>
+    </item>
+    <item>
+      <title>The new shape of war</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-05-30</guid>
+      <pubDate>Sat, 30 May 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-05-30.</description>
+    </item>
+    <item>
+      <title>A Starship enterprise</title>
+      <link>https://www.jenglish.top/resources/te</link>
+      <guid isPermaLink="false">te-2026-05-23</guid>
+      <pubDate>Sat, 23 May 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-05-23.</description>
+    </item>
+  </channel>
+</rss>

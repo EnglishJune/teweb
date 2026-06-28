@@ -44,6 +44,7 @@ const resources = [
 const pageName = computed(() => {
   if (currentPath.value === '/resources') return 'resources'
   if (currentPath.value === '/resources/te') return 'te'
+  if (currentPath.value === '/rss') return 'rss'
   return 'home'
 })
 
@@ -270,13 +271,24 @@ onUnmounted(() => {
           </nav>
         </header>
 
-        <main>
+        <main v-if="pageName === 'rss'" class="rss-page" aria-labelledby="rss-page-heading">
+          <section class="rss-panel">
+            <h1 id="rss-page-heading">Subscribe to updates</h1>
+            <div class="rss-feed-block">
+              <strong>RSS feed:</strong>
+              <a href="/rss.xml" target="_blank" rel="noreferrer">https://www.jenglish.top/rss.xml</a>
+            </div>
+            <p>You can subscribe with Feedly, Inoreader, NetNewsWire, Reeder, or any RSS reader.</p>
+          </section>
+        </main>
+
+        <main v-else>
           <section class="notice-panel" aria-labelledby="news-heading">
             <h1 id="news-heading" class="news-heading">News | 最新消息</h1>
             <p>今后网页更新时间固定为北京时间<strong>每周日9:00 AM</strong>，如有改变将邮件告知。</p>
-
+            <p><span style="color: #FF0000;">此网页已添加RSS订阅！</span></p>
             <p>
-              另：我将逐步发放部分文章的学习笔记，主要由ChatGPT生成，辅以人工核查，有html和PDF两种格式，这些文章的音频会同步放到B站，以更方便听读学习。目前内容和形式仍在尝试中，为避免浪费，愿意参与尝试的朋友们可邮件
+              我将逐步发放部分文章的学习笔记到B站，对应PDF格式可关注获取，也可通过
               <a
                 class="contact-link"
                 href="mailto:englishjune@163.com"
@@ -297,8 +309,18 @@ onUnmounted(() => {
                 <img src="/wechat_logo.png" alt="" aria-hidden="true" />
               </button>
               happy__june
-              联系我。
+              联系我获取。
             </p>
+
+            <section class="rss-notice" aria-labelledby="rss-heading">
+              <h2 id="rss-heading">
+                <a class="rss-link" href="/rss" @click="navigate($event, '/rss')">
+                  <img src="/icons/rss.svg" alt="" aria-hidden="true" />
+                  RSS 订阅
+                </a>
+              </h2>
+              <p>可通过RSS 订阅更新。</p>
+            </section>
 
             <h2 id="usage-heading">How to use | 使用说明</h2>
             <p>三个下载按钮对应：</p>
@@ -388,7 +410,12 @@ onUnmounted(() => {
         </main>
 
         <footer class="site-footer">
-          &copy; 2026 English Learning Materials. For educational use only.
+          <template v-if="pageName === 'te'">
+            &copy; 2026 English Learning Materials. For educational use only.
+          </template>
+          <template v-else>
+            &copy; 2026 J English.
+          </template>
         </footer>
       </div>
     </template>

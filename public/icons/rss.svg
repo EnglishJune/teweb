@@ -1,0 +1,8 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">RSS icon</title>
+  <desc id="desc">RSS subscription icon.</desc>
+  <rect width="64" height="64" rx="14" fill="#F26522"/>
+  <circle cx="20" cy="44" r="6" fill="#FFFFFF"/>
+  <path d="M18 28C27.9411 28 36 36.0589 36 46" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M18 16C34.5685 16 48 29.4315 48 46" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+</svg>
