@@ -1,6 +1,11 @@
 [
   {
     "id": "test-material-2026-05-23",
+    "title": "July 4th 2026, America at 250",
+    "date": "2026-07-04"
+  },
+  {
+    "id": "test-material-2026-05-23",
     "title": "Andy who?",
     "date": "2026-06-27"
   },
@@ -23,10 +28,5 @@
     "id": "test-material-2026-05-23",
     "title": "The new shape of war",
     "date": "2026-05-30"
-  },
-  {
-    "id": "test-material-2026-05-23",
-    "title": "A Starship enterprise",
-    "date": "2026-05-23"
   }
 ]
