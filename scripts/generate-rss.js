@@ -47,11 +47,9 @@ function validateMaterial(material, index) {
   }
 }
 
-function buildRss(materials) {
+function buildRss(materials, buildDate = new Date()) {
   const sortedMaterials = [...materials].sort((a, b) => b.date.localeCompare(a.date))
-  const lastBuildDate = sortedMaterials.length
-    ? toRssDate(sortedMaterials[0].date)
-    : new Date().toUTCString()
+  const lastBuildDate = buildDate.toUTCString()
 
   const items = sortedMaterials
     .map((material) => {
