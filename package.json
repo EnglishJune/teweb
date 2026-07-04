@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run generate:rss && vite",
+    "build": "npm run generate:rss && vite build",
+    "generate:rss": "node scripts/generate-rss.js",
     "preview": "vite preview"
   },
   "dependencies": {
