@@ -55,10 +55,11 @@ function buildRss(materials, buildDate = new Date()) {
     .map((material) => {
       const title = escapeXml(material.title)
       const date = escapeXml(material.date)
+      const itemUrl = `${channelLink}?issue=${date}`
 
       return `    <item>
       <title>${title}</title>
-      <link>${channelLink}</link>
+      <link>${itemUrl}</link>
       <guid isPermaLink="false">te-${date}</guid>
       <pubDate>${toRssDate(material.date)}</pubDate>
       <description>New TE learning materials are available for ${date}.</description>
