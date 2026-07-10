@@ -285,8 +285,8 @@ onUnmounted(() => {
         <main v-else>
           <section class="notice-panel" aria-labelledby="news-heading">
             <h1 id="news-heading" class="news-heading">News | 最新消息</h1>
-            <p>今后网页更新时间固定为北京时间<strong>每周日9:00 AM</strong>，如有改变将邮件告知。</p>
-            <p><span style="color: #FF0000;">此网页已添加RSS订阅！</span></p>
+            <p><span style="color: #FF0000;">!!! 我正在做 AI 辅助英语学习，目前集中在《经济学人》周刊的阅读笔记和播客的口语分析，亟需使用这些材料实际学习的反馈，相关资料在我的B站视频里，恳请大家给我实际使用、学习反馈，希望我们一起把“免费学习”、“AI辅助学习“做得更好！微信/邮件都可！我将为提供最多反馈的提供更多你需要的学习资料或AI支持！</span></p>
+            <p>网页更新时间固定为北京时间<strong>每周日9:00 AM</strong>，如有改变将邮件告知。</p>
             <p>
               我将逐步发放部分文章的学习笔记到B站，对应PDF格式可关注获取，也可通过
               <a
@@ -311,6 +311,7 @@ onUnmounted(() => {
               happy__june
               联系我获取。
             </p>
+            <p><span style="color: #FF0000;">此网页已添加RSS订阅！</span></p>
 
             <section class="rss-notice" aria-labelledby="rss-heading">
               <h2 id="rss-heading">
