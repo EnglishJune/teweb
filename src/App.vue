@@ -311,7 +311,7 @@ onUnmounted(() => {
               happy__june
               联系我获取。
             </p>
-            <p><span style="color: #FF0000;">此网页已添加RSS订阅！</span></p>
+            <p><span style="color: #FF0000;">此网页已添加RSS订阅！点击下方RSS订阅获取地址。</span></p>
 
             <section class="rss-notice" aria-labelledby="rss-heading">
               <h2 id="rss-heading">
