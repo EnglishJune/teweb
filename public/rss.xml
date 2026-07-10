@@ -6,7 +6,14 @@
     <description>Updates for J English TE learning materials.</description>
     <language>en</language>
     <atom:link href="https://www.jenglish.top/resources/te/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 04 Jul 2026 20:45:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 15:18:41 GMT</lastBuildDate>
+    <item>
+      <title>The man who would change Russia</title>
+      <link>https://www.jenglish.top/resources/te?issue=2026-07-11</link>
+      <guid isPermaLink="false">te-2026-07-11</guid>
+      <pubDate>Sat, 11 Jul 2026 01:00:00 GMT</pubDate>
+      <description>New TE learning materials are available for 2026-07-11.</description>
+    </item>
     <item>
       <title>July 4th 2026, America at 250</title>
       <link>https://www.jenglish.top/resources/te?issue=2026-07-04</link>
@@ -41,13 +48,6 @@
       <guid isPermaLink="false">te-2026-06-06</guid>
       <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
       <description>New TE learning materials are available for 2026-06-06.</description>
-    </item>
-    <item>
-      <title>The new shape of war</title>
-      <link>https://www.jenglish.top/resources/te?issue=2026-05-30</link>
-      <guid isPermaLink="false">te-2026-05-30</guid>
-      <pubDate>Sat, 30 May 2026 01:00:00 GMT</pubDate>
-      <description>New TE learning materials are available for 2026-05-30.</description>
     </item>
   </channel>
 </rss>
