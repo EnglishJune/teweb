@@ -1,6 +1,11 @@
 [
   {
     "id": "test-material-2026-05-23",
+    "title": "The man who would change Russia",
+    "date": "2026-07-011"
+  },
+  {
+    "id": "test-material-2026-05-23",
     "title": "July 4th 2026, America at 250",
     "date": "2026-07-04"
   },
@@ -23,10 +28,5 @@
     "id": "test-material-2026-05-23",
     "title": "The rise of Gen-Z socialism",
     "date": "2026-06-06"
-  },
-  {
-    "id": "test-material-2026-05-23",
-    "title": "The new shape of war",
-    "date": "2026-05-30"
   }
 ]
